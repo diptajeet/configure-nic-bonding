@@ -3,15 +3,17 @@ galaxy_info:
   description: Configure NIC Bonding
 
   min_ansible_version: 1.2
+  
+  license: MIT
 
   platforms:
    - name: RHEL
      versions:
-     - 6.x
+     - 6
      
    - name: CentOS
      versions:
-     - 6.x
+     - 6
 
   galaxy_tags: 
    - System
