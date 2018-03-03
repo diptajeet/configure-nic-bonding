@@ -3,3 +3,6 @@
     name: '*'
     state: latest
     
+ - name: Installing prerequistes
+   yum: name=yum-utils state=installed
+    
