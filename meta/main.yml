@@ -7,11 +7,7 @@ galaxy_info:
   license: MIT
 
   platforms:
-   - name: RHEL
-     versions:
-     - 6
-     
-   - name: CentOS
+   - name: EL
      versions:
      - 6
 
