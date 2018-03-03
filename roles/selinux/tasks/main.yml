@@ -1,0 +1,12 @@
+ - name: Check selinux status
+   command: getenforce
+   register: sestatus
+   
+ - name: Check if libselinux-python is installed
+   yum: list=libselinux-python
+   register: pystatus
+   
+ - name: Installing libselinux-python
+   yum: name=libselinux-python state=installed
+   when: ("Enforcing" in sestatus.stdout) or (pystatus.results.yumstate != 'installed')
+    

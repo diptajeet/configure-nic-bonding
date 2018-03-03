@@ -1,0 +1,7 @@
+DEVICE={{ ansible_eth1.device }}
+ONBOOT=yes
+BOOTPROTO=none
+HWADDR={{ ansible_eth1.macaddress }}
+USERCTL=no
+MASTER=bond0
+SLAVE=yes

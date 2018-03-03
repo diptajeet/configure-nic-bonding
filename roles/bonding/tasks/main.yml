@@ -1,0 +1,13 @@
+ - name: Backup current configuration and copy new configuration files
+   template: 
+    backup: yes
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+   with_items:
+    - { src: 'ifcfg-eth0.j2', dest: '/etc/sysconfig/network-scripts/ifcfg-eth0' }
+    - { src: 'ifcfg-eth1.j2', dest: '/etc/sysconfig/network-scripts/ifcfg-eth1' }
+    - { src: 'ifcfg-bond0.j2', dest: '/etc/sysconfig/network-scripts/ifcfg-bond0' }
+    - { src: 'bonding.conf.j2', dest: '/etc/modprobe.d/bonding.conf' }
+   
+   notify: 
+    - Do Network Restart

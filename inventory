@@ -1,0 +1,4 @@
+# Put your list of servers here
+
+[servers]
+ansible-node1

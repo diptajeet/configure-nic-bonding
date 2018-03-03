@@ -1,0 +1,4 @@
+---
+# handlers file for nic-bonding
+   - name: Do Network Restart
+     service: name=network state=restarted
